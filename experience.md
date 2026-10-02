@@ -13,8 +13,8 @@ layout: default
       <ul class="entry-desc">
         <li>Research and development on post-training quantization (PTQ) of deep learning models, with a focus on LLMs.</li>
         <li>Implemented state-of-the-art PTQ methods, developed new quantization algorithms and improved existing implementations.</li>
-        <li>Contributed parts of this work to AMD's open-source quantization library <a href="https://github.com/Xilinx/brevitas">Brevitas</a>. For example, I added batched inputs to its GPTQ, GPFQ and Qronos implementations, which sped up quantizing Llama models by up to 2× (<a href="https://github.com/Xilinx/brevitas/pull/1427">PR #1427</a>).</li>
-        <li>Focused my research on scale selection for low-bit-width datatypes, mostly integers but also MXFP4 and NVFP4. I designed and implemented an algorithm that computes mathematically optimal, data-aware weight scales under round-to-nearest (RTN) channel-wise quantization.</li>
+        <li>Contributed parts of this work to AMD's open-source quantization library <a href="https://github.com/Xilinx/brevitas">Brevitas</a>. For example, I added batched inputs to its GPTQ and Qronos implementations, which sped up quantizing Llama models by up to 2×.</li>
+        <li>Focused my research on scale selection for low-bit-width datatypes, mostly integers but also MXFP4 and NVFP4. I designed and implemented an algorithm that computes mathematically optimal, data-aware weight scales under channel-wise RTN quantization.</li>
       </ul>
     </div>
     <div class="entry-date">Oct 2025 – Jul 2026</div>

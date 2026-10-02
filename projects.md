@@ -40,17 +40,7 @@ A selection of projects and coursework I've done across several domains.
     </div>
     <div class="entry-date">2024</div>
   </div>
-  <div class="entry">
-    <div class="entry-info">
-      <div class="entry-title">Predicting Gene Expression from Histone Marks</div>
-      <div class="entry-meta">Group course project · <a href="https://video.ethz.ch/lectures/d-infk/2024/autumn/263-5351-00L">Machine Learning for Genomics</a>, ETH Zürich · <a href="https://github.com/JP-Amboage/ml4g-P1">GitHub</a></div>
-      <ul class="entry-desc">
-        <li>Predicted gene expression in an unseen cell line from six histone-mark tracks around each gene's start site, using a 1D CNN trained on two other cell lines.</li>
-      </ul>
-    </div>
-    <div class="entry-date">2024</div>
-  </div>
-  <div class="entry">
+    <div class="entry">
     <div class="entry-info">
       <div class="entry-title">Rocket Path Planning</div>
       <div class="entry-meta">Group course project · <a href="https://idsc.ethz.ch/education/lectures/PDM4AR.html">Planning and Decision Making for Autonomous Robots</a>, ETH Zürich</div>
@@ -58,6 +48,16 @@ A selection of projects and coursework I've done across several domains.
         <li>Implemented a planner that takes the environment description (planets, moving satellites, start, goal and other constraints) and computes a feasible trajectory for the rocket.</li>
         <li>Built it with successive convexification (SCvx), implemented on top of CVXPY with the ECOS solver.</li>
         <li>Evaluated on three scenarios of increasing difficulty, up to docking while dodging moving satellites.</li>
+      </ul>
+    </div>
+    <div class="entry-date">2024</div>
+  </div>
+  <div class="entry">
+    <div class="entry-info">
+      <div class="entry-title">Predicting Gene Expression from Histone Marks</div>
+      <div class="entry-meta">Group course project · <a href="https://video.ethz.ch/lectures/d-infk/2024/autumn/263-5351-00L">Machine Learning for Genomics</a>, ETH Zürich · <a href="https://github.com/JP-Amboage/ml4g-P1">GitHub</a></div>
+      <ul class="entry-desc">
+        <li>Predicted gene expression in an unseen cell line from six histone-mark tracks around each gene's start site, using a 1D CNN trained on two other cell lines.</li>
       </ul>
     </div>
     <div class="entry-date">2024</div>
