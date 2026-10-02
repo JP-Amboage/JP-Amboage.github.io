@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="{{ site.description }}">
+  <title>{{ page.title }} – {{ site.title }}</title>
+  <link rel="stylesheet" href="/style.css?v={{ site.time | date: '%s' }}">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;1,400&family=Source+Sans+3:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🫰🏻</text></svg>">
+</head>
+<body>
+
+<div class="container">
+
+  {% include nav.html %}
+
+  {% if page.url == "/" %}
+  <!-- Two-column layout -->
+  <div class="main-page-layout">
+
+    <!-- Profile Block -->
+    <div class="profile-block">
+      <img src="images/profile.jpg" alt="Juan P G Amboage" class="profile-photo">
+      <div class="profile-info">
+        <h1>Juan P G Amboage</h1>
+        <p class="title">Machine Learning Doctoral Researcher</p>
+        <p><a href="https://aidos.group/">AIDOS Lab</a>, University of Fribourg</p>
+        <div class="contact-links">
+          <a href="mailto:juan.garciaamboage@unifr.ch">Email</a>
+          <a href="https://scholar.google.com/citations?user=WSEKK9gAAAAJ&hl=en">Scholar</a>
+          <a href="https://github.com/JP-Amboage">GitHub</a>
+          <a href="https://www.linkedin.com/in/juan-p-garcia-amboage">LinkedIn</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main content -->
+    <div class="main-content">
+      {{ content }}
+    </div>
+
+  </div> <!-- end main-page-layout -->
+
+  {% if page.closing %}
+  <!-- Closing line spanning both columns (set via `closing:` in index.md) -->
+  <div class="home-closing">
+    {{ page.closing | markdownify }}
+  </div>
+  {% endif %}
+
+  <!-- Full-width summary below the two-column layout -->
+  {% include home-summary.html %}
+
+  {% else %}
+  <div class="main-content">
+    {{ content }}
+  </div>
+  {% endif %}
+
+  <footer>
+    Last updated: {{ site.time | date: "%B %Y" }}
+  </footer>
+
+</div>
+
+</body>
+</html>

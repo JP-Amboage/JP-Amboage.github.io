@@ -1,0 +1,640 @@
+html {
+  scroll-behavior: smooth;
+}
+
+/* =========================
+   Color Palette
+   ========================= */
+
+:root {
+  --bg: #FCFCFC;
+  --text: #222222;
+  --accent: #222222;
+  --accent-hover: #555555;
+  --muted: #7A7A7A;
+  --border: #ECECEC;
+}
+
+/* =========================
+   Global Design
+   ========================= */
+
+body {
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 15px;
+  line-height: 1.7;
+  background-color: var(--bg);
+  color: var(--text);
+  margin: 0;
+  padding: 0;
+}
+
+code {
+  font-family: 'SFMono-Regular', Consolas, Menlo, monospace;
+  font-size: 0.88em;
+  background-color: var(--border);
+  color: var(--text);
+  padding: 0.15em 0.4em;
+  border-radius: 4px;
+}
+
+pre code {
+  display: block;
+  padding: 1em;
+  overflow-x: auto;
+  border-radius: 6px;
+  line-height: 1.5;
+}
+
+/* Page width */
+
+.container {
+  max-width: 900px;
+  margin: 80px auto;
+  padding: 0 30px;
+}
+
+/* =========================
+   Homepage Two-Column Layout
+   ========================= */
+
+.main-page-layout {
+  display: flex;
+  gap: 60px;
+  max-width: 900px;
+  margin: 0 auto;
+  align-items: flex-start;
+}
+
+.main-content {
+  flex: 1;
+}
+
+/* =========================
+   Navigation
+   ========================= */
+
+.main-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 28px;
+  margin-bottom: 70px;
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: var(--accent);
+  position: relative;
+  transition: color 0.2s ease;
+}
+
+/* underline animation */
+
+.main-nav a::after {
+  content: '';
+  display: block;
+  height: 2px;
+  width: 0;
+  background: var(--accent);
+  transition: width 0.3s ease;
+  margin-top: 4px;
+}
+
+.main-nav a:hover::after {
+  width: 100%;
+}
+
+.main-nav a:hover {
+  color: var(--muted);
+}
+
+/* =========================
+   Headings
+   ========================= */
+
+h1 {
+  font-family: 'Fraunces', serif;
+  letter-spacing: 0.4px;
+}
+
+h2 {
+  font-family: 'Source Sans 3', sans-serif;
+  letter-spacing: 0.4px;
+}
+
+h1 {
+  font-weight: 400;
+  font-size: 1.9em;
+}
+
+h2 {
+  font-weight: 700;
+  font-size: 1.25em;
+  margin-top: 2em;
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+h3 {
+  font-family: 'Source Sans 3', sans-serif;
+  font-weight: 600;
+  font-size: 0.95em;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-top: 1.8em;
+  margin-bottom: 0.6em;
+}
+
+.table-wrap {
+  overflow-x: auto;
+  margin: 1em 0 1.5em;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.92rem;
+}
+
+th, td {
+  text-align: left;
+  padding: 9px 16px 9px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+th {
+  font-weight: 600;
+  color: var(--muted);
+  font-size: 0.8rem;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  border-bottom: 1.5px solid var(--text);
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+
+/* =========================
+   Text Elements
+   ========================= */
+
+hr {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 3.5em 0;
+}
+
+/* =========================
+   Links
+   ========================= */
+
+a {
+  color: var(--text);
+  text-decoration: underline;
+  text-decoration-color: var(--muted);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  transition: color 0.2s ease, text-decoration-color 0.2s ease;
+}
+
+a:hover {
+  text-decoration-color: var(--text);
+}
+
+/* =========================
+   Profile Block
+   ========================= */
+
+.profile-block {
+  flex: 0 0 260px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  padding: 10px;
+  gap: 22px;
+}
+
+/* Profile Photo */
+
+.profile-photo {
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  object-fit: cover;
+
+  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+}
+
+/* Profile Info */
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.profile-info h1 {
+  font-weight: 400;
+  font-size: 1.35em;
+  margin: 0.2em 0;
+}
+
+.title {
+  font-weight: 500;
+  color: var(--muted);
+  margin-bottom: 1em;
+  line-height: 1.4;
+  font-size: 0.95rem;
+}
+
+.profile-info p {
+  margin: 0.5em 0;
+  line-height: 1.5;
+}
+
+/* =========================
+   Contact Links
+   ========================= */
+
+.contact-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.contact-links a {
+  font-size: 0.85rem;
+  color: var(--accent);
+}
+
+.contact-links a:hover {
+  color: var(--accent-hover);
+}
+
+.session-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.session-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.session-label {
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--text);
+  min-width: 68px;
+}
+
+.session-title {
+  font-size: 0.88rem;
+  color: var(--muted);
+  flex: 1;
+}
+
+.session-links {
+  display: flex;
+  gap: 7px;
+  margin-left: auto;
+}
+
+.btn-link {
+  font-size: 0.78rem;
+  padding: 3px 11px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  line-height: 1.6;
+  display: inline-block;
+}
+
+.btn-slides {
+  border: 1.5px solid var(--accent);
+  color: var(--accent);
+  background: transparent;
+}
+
+.btn-slides:hover {
+  background: var(--accent);
+  color: white;
+}
+
+.btn-video {
+  background: var(--accent);
+  color: white;
+  border: 1.5px solid var(--accent);
+}
+
+.btn-video:hover {
+  background: var(--accent-hover);
+  border-color: var(--accent-hover);
+  color: white;
+}
+
+.btn-notebook {
+  border: 1.5px solid var(--muted);
+  color: var(--muted);
+  background: transparent;
+}
+
+.btn-notebook:hover {
+  background: var(--muted);
+  color: white;
+}
+
+/* =========================
+   Course Page
+   ========================= */
+
+.back-link {
+  display: inline-block;
+  font-size: 0.875rem;
+  color: var(--muted);
+  margin-bottom: 2em;
+  transition: color 0.2s ease;
+}
+
+.back-link:hover {
+  color: var(--accent);
+}
+
+.course-page-meta {
+  font-size: 0.9rem;
+  color: var(--muted);
+  margin-top: -0.4em;
+  margin-bottom: 0.8em;
+}
+
+.course-schedule {
+  display: inline-block;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text);
+  background-color: var(--border);
+  padding: 0.4em 0.9em;
+  border-radius: 6px;
+  margin-top: 0;
+  margin-bottom: 2em;
+}
+
+.page-toc {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px 22px;
+  padding: 0.9em 1.1em;
+  margin-bottom: 2em;
+  background-color: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-size: 0.88rem;
+}
+
+.page-toc-label {
+  font-weight: 600;
+  color: var(--muted);
+  margin-right: 4px;
+}
+
+.page-toc a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s ease;
+}
+
+.page-toc a:hover {
+  border-bottom-color: var(--accent);
+}
+
+.session-grid-page {
+  margin-top: 0.5em;
+}
+
+.session-grid-page .session-item {
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.session-grid-page .session-item:last-child {
+  border-bottom: none;
+}
+
+.contact-list {
+  margin-top: 0.5em;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.contact-item:last-child {
+  border-bottom: none;
+}
+
+.contact-name {
+  font-weight: 600;
+  color: var(--text);
+}
+
+.contact-role {
+  font-size: 0.85rem;
+  color: var(--muted);
+  background-color: var(--border);
+  padding: 2px 10px;
+  border-radius: 20px;
+}
+
+.contact-email {
+  margin-left: auto;
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 0.92rem;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s ease;
+}
+
+.contact-email:hover {
+  border-bottom-color: var(--accent);
+}
+
+/* =========================
+   Homepage Summary (skills & activities)
+   ========================= */
+
+.home-closing {
+  max-width: 900px;
+  margin: 30px auto 0;
+  text-align: center;
+  font-size: 1.1em;
+}
+
+.home-summary {
+  max-width: 900px;
+  margin: 80px auto 0;
+}
+
+.home-summary p {
+  margin: 0.6em 0;
+  font-size: 0.95rem;
+}
+
+/* =========================
+   Entry Lists (education, experience, teaching)
+   ========================= */
+
+.entry-list {
+  margin-top: 0.5em;
+}
+
+.entry {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 16px;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.entry:last-child {
+  border-bottom: none;
+}
+
+.entry-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.entry-title {
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+.entry-title-note {
+  font-weight: 400;
+}
+
+.entry-meta {
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin-top: 3px;
+}
+
+.entry-desc {
+  font-size: 0.9rem;
+  margin: 6px 0 0;
+  padding-left: 18px;
+}
+
+.entry-desc li {
+  margin-bottom: 2px;
+}
+
+.entry-date {
+  font-size: 0.85rem;
+  color: var(--muted);
+  white-space: nowrap;
+  text-align: right;
+}
+
+/* =========================
+   Papers Page
+   ========================= */
+
+.papers-list {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 0.8em;
+}
+
+.papers-list li {
+  padding: 14px 0;
+  margin-bottom: 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.papers-list li:last-child {
+  border-bottom: none;
+}
+
+.papers-list .btn-link {
+  margin-top: 10px;
+}
+
+/* =========================
+   Footer
+   ========================= */
+
+footer {
+  margin-top: 90px;
+  font-size: 0.9em;
+  color: var(--muted);
+  text-align: center;
+}
+
+/* =========================
+   Responsive Design
+   ========================= */
+
+@media (max-width: 900px) {
+
+  .main-page-layout {
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+  }
+
+  .profile-block {
+    width: 70%;
+  }
+
+  .main-content {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+
+  .profile-photo {
+    width: 130px;
+    height: 130px;
+  }
+
+  .profile-info h1 {
+    font-size: 1.5em;
+  }
+
+  .contact-links {
+    gap: 8px;
+  }
+
+  .entry {
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .entry-date {
+    text-align: left;
+  }
+
+}
